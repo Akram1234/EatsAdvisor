@@ -11,8 +11,8 @@ app = FastAPI()
 
 
 class params(BaseModel):
-    alpha:int=0
-    Beta:int=0
+    n_neighbors:int=5
+    return_distance:bool=False
 
 class PredictionIn(BaseModel):
     nutrition_input:conlist(float, min_items=9, max_items=9)
